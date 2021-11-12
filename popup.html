@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Rate it!</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<!--контейнер, содержащий название, логотип и номер версии-->
+    <div class="modal-header">
+        <h1 class="logo">
+            <img class="logo-icon" src="icon.png" alt="Error Weight"> Rate it!
+        <span class="version">(1.0.0)</span>
+        </h1>
+    </div>
+
+    <form name="formCalc">
+        <h2 title="На сколько эта задача принесет пользу для проекта/тестирования?">Польза</h2>
+        <select id="benefit" data-action="calculate">
+            <option value= 1 title="На тестировании почти не скажется.">Минимальная</option>
+            <option value= 5 title="Тестировать станем заметно лучше.">Средняя</option>
+            <option value= 13 title="Тестировать станем гораздо лучше.">Высокая</option>
+            <option value= 21 title="Команда будет счастлива, а качество тестирования выйдет на новый уровень!">Грандиозная</option>
+        </select>
+
+        <h2 title="Насколько эта задача открывает новые возможности?">Новаторство</h2>
+        <select id="innovation" data-action="calculate">
+            <option value= 1 title="Будем делать всё так же, как и раньше.">-</option>
+            <option value= 5 title="Выполнив эту задачу мы получаем новые возможности в локальной (изолированной) среде.">Открывает новую форточку.</option>
+            <option value= 13 title="Выполнив эту задачу мы получаем новые возможности на уровне одного стрима.">Открывает новое окно.</option>
+            <option value= 21 title="Будем делать очень крутые глобальные штуки. Твой отец будет на столько горд тобой, что вернется с хлебом из магазина спустя 25 лет">Открывает новые двери.</option>
+        </select>
+
+        <h2 title="Насколько мы рискуем, если это не сделаем?">Предотвращаемый уровень риска</h2>
+        <select id="risk" data-action="calculate">
+            <option value= 1 title="Качество не ухудшится (почти)">Минимальный</option>
+            <option value= 5 title="Качество станет заметно хуже.">Средний</option>
+            <option value= 13 title="Качество станет гораздо хуже.">Высокий</option>
+            <option value= 21 title="Большие последствия для качества продукта. Ты будешь как Брюс Уиллис в фильме Армагеддон">Критический</option>
+        </select>
+
+        <h2 title="Насколько сложно реализовать эту задачу?">Сложность реализации</h2>
+        <select id="level" data-action="calculate">
+            <option value= 1 title="Справится любой за короткое время">0.2 - 0.3 TSP</option>
+            <option value= 5 title="Несложно, но нужно немного погрузиться в контекст">0.4 - 0.5 TSP</option>
+            <option value= 13 title="Несложно, но нужно сильно погрузиться в контекст">0.6- 0.7 TSP</option>
+            <option value= 21 title="Сложно. Много контекста, в котором предстоит разобраться. Тебя удостоят докторской степени по окончанию задачи (но это не точно)">0.8 - 1 TSP</option>
+        </select>
+    </form>
+<div id="total">1</div>
+<div class="author">a.dolmatov@2gis.ru</div>
+
+<script src="popup.js"></script>
+</body>
+
+</html>
