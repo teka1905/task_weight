@@ -1,28 +1,28 @@
-html,
-    body {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 14px;
-      margin: 0;
-      min-height: 180px;
-      padding: 0;
-      width: 380px;
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    min-height: 180px;
+    padding: 0;
+    width: 380px;
     }
     /*задаём настройки для заголовков первого уровня*/
     h1 {
-      font-family: 'Menlo', monospace;
-      font-size: 22px;
-      font-weight: 400;
-      margin: 0;
-      color: #2f5876;
+        font-family: 'Menlo', monospace;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+        color: #2f5876;
     }
     h2 {
-      font-size: 18px;
-      font-weight: 400;
-      margin-bottom: 4px;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 4px;
     }
     /*задаём ширину картинки*/
     img {
-      width: 30px; /*ширина изображений*/
+        width: 30px; /*ширина изображений*/
+
     }
     .modal-header {
         align-items: center; /*выравнивание элементов по центру*/
@@ -32,17 +32,19 @@ html,
     form {
         align-items: center; /*выравнивание элементов по центру*/
         padding: 16px;
+        clear: left;
     }
     .logo {
-      padding: 16px; /*отступы со всех сторон*/
+        padding: 16px; /*отступы со всех сторон*/
+        float: left;
     }
     .logo-icon {
-      vertical-align: text-bottom; /*выравнивание по нижней части текста*/
-      margin-right: 12px; /*задётся отступ элементов от изображения*/
+        vertical-align: text-bottom; /*выравнивание по нижней части текста*/
+        margin-right: 12px; /*задётся отступ элементов от изображения*/
     }
     .version {
-      color: #444;
-      font-size: 18px;
+        color: #444;
+        font-size: 18px;
     }
     .author {
         color: #444444;
@@ -64,4 +66,9 @@ html,
         height: 25px;
         width: 320px;
         font-size: 15px;
+    }
+    .description {
+        color: #444444;
+        font-size: 10px;
+        padding-bottom: 0px;
     }
