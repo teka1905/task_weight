@@ -11,7 +11,7 @@ inputElements.forEach((element) => {
     element.addEventListener('change', window.funcCalc)
 });
 
-function copyToClipboard(str) {
+function copyToClipboard() {
   let area = document.createElement('textarea');
 
   document.body.appendChild(area);
@@ -22,6 +22,6 @@ function copyToClipboard(str) {
 }
 
 const copyElement = document.querySelectorAll('[data-action="copyElement"]');
-inputElements.forEach((element) => {
-    element.addEventListener('change', window.copyToClipboard)
+copyElement.forEach((element) => {
+    element.addEventListener('click', window.copyToClipboard)
 });
