@@ -3,7 +3,7 @@ function funcCalc() {
     let risk = +document.getElementById("risk").value;
     let level = +document.getElementById("level").value;
     let result = ((innovation+risk)/level) * 10
-    document.getElementById("total").innerHTML = Number(result.toFixed(2))
+    document.getElementById("total").innerHTML = Math.round(result)
 }
 
 const inputElements = document.querySelectorAll('[data-action="calculate"]');
