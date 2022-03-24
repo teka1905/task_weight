@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "Rait it!",
+	"name": "Task Weight",
 	"description": "Калькулятор приоритета задач",
 	"version": "1.0.3",
 	"icons": {"128": "icon.png"},
