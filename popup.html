@@ -12,7 +12,7 @@
     <div class="modal-header">
         <h1 class="logo">
             <img class="logo-icon" src="icon.png" alt="Task Weight" > Task Weight
-        <span class="version">(1.0.3)</span>
+        <span class="version">(2.0)</span>
         </h1>
     </div>
 
@@ -36,13 +36,13 @@
             <option value= 21 title="Большие последствия для качества продукта.">21: Критический</option>
         </select>
 
-        <h2 title="Насколько сложно реализовать эту задачу?">Сложность реализации</h2>
-        <p class="description">Насколько сложно реализовать эту задачу?</p>
+        <h2 title="Сколько времени займет выполнение задачи?">Срок реализации</h2>
+        <p class="description">Сколько времени займет выполнение задачи?</p>
         <select id="level" data-action="calculate">
-            <option value= 1 title="Справится любой за короткое время">1: 0.2 - 0.3 TSP</option>
-            <option value= 5 title="Несложно, но нужно немного погрузиться в контекст">5: 0.4 - 0.5 TSP</option>
-            <option value= 13 title="Несложно, но нужно сильно погрузиться в контекст">13: 0.6 - 0.7 TSP</option>
-            <option value= 21 title="Сложно. Много контекста, в котором предстоит разобраться.">21: 0.8 - 1 TSP</option>
+            <option value= 1 title="Справится любой за короткое время">1: 0.5 WD</option>
+            <option value= 5 title="Несложно, но нужно немного погрузиться в контекст">5: 1 WD</option>
+            <option value= 13 title="Несложно, но нужно сильно погрузиться в контекст">13: 2 WD</option>
+            <option value= 21 title="Сложно. Много контекста, в котором предстоит разобраться.">21: 5 WD</option>
         </select>
     </form>
 <div id="total" title="(Новаторство+Предотвращаемый уровень риска)/Сложность реализации" data-action="copyElement">20</div>
