@@ -2,53 +2,93 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Task Weight</title>
+    <meta charset="utf-8">
+    <title>Task Weight</title>
     <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-<!--контейнер, содержащий название, логотип и номер версии-->
+    <!--контейнер, содержащий название, логотип и номер версии-->
     <div class="modal-header">
         <h1 class="logo">
-            <img class="logo-icon" src="icon.png" alt="Task Weight" > Task Weight
-        <span class="version">(2.0)</span>
+            <img class="logo-icon" src="icon.png" alt="Task Weight"> Task Weight
+            <span class="version">(2.0)</span>
         </h1>
     </div>
 
     <form name="formCalc">
 
-        <h2 title="Насколько эта задача открывает новые возможности?">Новаторство</h2>
-        <p class="description">Насколько эта задача открывает новые возможности?</p>
-        <select id="innovation" data-action="calculate">
-            <option value= 1 title="Будем делать всё так же, как и раньше.">1: Ничего нового</option>
-            <option value= 5 title="Выполнив эту задачу мы получаем новые возможности в локальной (изолированной) среде">5: Открывает новую форточку</option>
-            <option value= 13 title="Выполнив эту задачу мы получаем новые возможности на уровне одного стрима">13: Открывает новое окно</option>
-            <option value= 21 title="Будем делать очень крутые глобальные штуки.">21: Открывает новые двери</option>
-        </select>
+        <h2>Что взвешиваем?</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-one" name="switch-one" value="task" checked />
+            <label for="radio-one">Задача</label>
+            <input type="radio" id="radio-two" name="switch-one" value="flaky" />
+            <label for="radio-two">Flaky</label>
+        </div>
+        <div id="task">
+            <h2 title="Насколько эта задача открывает новые возможности?">Новаторство</h2>
+            <p class="description">Насколько эта задача открывает новые возможности?</p>
+            <select id="innovation" data-action="calculate">
+                <option value=1 title="Будем делать всё так же, как и раньше.">1: Ничего нового</option>
+                <option value=5
+                    title="Выполнив эту задачу мы получаем новые возможности в локальной (изолированной) среде">5:
+                    Открывает новую форточку</option>
+                <option value=13 title="Выполнив эту задачу мы получаем новые возможности на уровне одного стрима">13:
+                    Открывает новое окно</option>
+                <option value=21 title="Будем делать очень крутые глобальные штуки.">21: Открывает новые двери</option>
+            </select>
 
-        <h2 title="Насколько мы рискуем, если это не сделаем?">Предотвращаемый уровень риска</h2>
-        <p class="description">Насколько мы рискуем, если это не сделаем?</p>
-        <select id="risk" data-action="calculate">
-            <option value= 1 title="Качество не ухудшится (почти)">1: Минимальный</option>
-            <option value= 5 title="Качество станет заметно хуже.">5: Средний</option>
-            <option value= 13 title="Качество станет гораздо хуже.">13: Высокий</option>
-            <option value= 21 title="Большие последствия для качества продукта.">21: Критический</option>
-        </select>
+            <h2 title="Насколько мы рискуем, если это не сделаем?">Предотвращаемый уровень риска</h2>
+            <p class="description">Насколько мы рискуем, если это не сделаем?</p>
+            <select id="risk" data-action="calculate">
+                <option value=1 title="Качество не ухудшится (почти)">1: Минимальный</option>
+                <option value=5 title="Качество станет заметно хуже.">5: Средний</option>
+                <option value=13 title="Качество станет гораздо хуже.">13: Высокий</option>
+                <option value=21 title="Большие последствия для качества продукта.">21: Критический</option>
+            </select>
 
-        <h2 title="Сколько времени займет выполнение задачи?">Срок реализации</h2>
-        <p class="description">Сколько времени займет выполнение задачи?</p>
-        <select id="level" data-action="calculate">
-            <option value= 1 >1: 0.5 SP</option>
-            <option value= 2 >5: 1 SP</option>
-            <option value= 3 >13: 2 SP</option>
-            <option value= 4 >21: 5 SP</option>
-        </select>
+            <h2 title="Сколько времени займет выполнение задачи?">Срок реализации</h2>
+            <p class="description">Сколько времени займет выполнение задачи?</p>
+            <select id="level" data-action="calculate">
+                <option value=1>1: 0.5 SP</option>
+                <option value=2>5: 1 SP</option>
+                <option value=3>13: 2 SP</option>
+                <option value=4>21: 5 SP</option>
+            </select>
+        </div>
+
+        <div id="flaky">
+
+            <h2>Массовость</h2>
+            <select id="mass" data-action="calculate">
+                <option value=1>1: Единичная ошибка</option>
+                <option value=2>5: Затрагивает 2-3 теста</option>
+                <option value=3.5>13: Затрагивает много тестов</option>
+            </select>
+
+            <h2>Насколько блокирует</h2>
+            <select id="block" data-action="calculate">
+                <option value=1 title="падает раз в 100 лет">0.5: Едва заметно</option>
+                <option value=2 title="падает редко, но не раз в 100 лет">1: Не блокирует</option>
+                <option value=3 title="но не каждый прогон">5: Периодически замечаем</option>
+                <option value=4 title="валит пайплайн каждый прогон">13: Блокирует</option>
+            </select>
+
+            <h2>Критичность области, в которой флакует тест</h2>
+            <select id="critical" data-action="calculate">
+                <option value=1>1: P2 и ниже</option>
+                <option value=2>5: P1</option>
+                <option value=3>13: P0</option>
+            </select>
+
+        </div>
+
     </form>
-<div id="total" title="(Новаторство+Предотвращаемый уровень риска)/Сложность реализации" data-action="copyElement">20</div>
-<p id="copyText">Click to Copy</p>
+    <div id="total" title="(Новаторство+Предотвращаемый уровень риска)/Сложность реализации" data-action="copyElement">
+        20</div>
+    <p id="copyText">Click to Copy</p>
 
-<script src="popup.js"></script>
+    <script src="popup.js"></script>
 </body>
 
 </html>
