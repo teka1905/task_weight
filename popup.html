@@ -15,9 +15,7 @@
             <span class="version">(2.0)</span>
         </h1>
     </div>
-
     <form name="formCalc">
-
         <h2>Что взвешиваем?</h2>
         <div class="switch-field">
             <input type="radio" id="radio-one" name="switch-one" value="task" checked />
@@ -25,6 +23,9 @@
             <input type="radio" id="radio-two" name="switch-one" value="flaky" />
             <label for="radio-two">Flaky</label>
         </div>
+        <h1></h1>
+
+        <!--контейнер, содержащий task-weight-->
         <div id="task">
             <h2 title="Насколько эта задача открывает новые возможности?">Новаторство</h2>
             <p class="description">Насколько эта задача открывает новые возможности?</p>
@@ -50,15 +51,22 @@
             <h2 title="Сколько времени займет выполнение задачи?">Срок реализации</h2>
             <p class="description">Сколько времени займет выполнение задачи?</p>
             <select id="level" data-action="calculate">
-                <option value=1>1: 0.5 SP</option>
+                <option value=0.5 title="Делается за 5 минут">0: 0 SP</option>
+                <option selected="selected" value=1>1: 0.5 SP</option>
                 <option value=2>5: 1 SP</option>
                 <option value=3>13: 2 SP</option>
                 <option value=4>21: 5 SP</option>
             </select>
+
+            <h2></h2>
+            <div class="switch-field-irritation">
+                <input type="checkbox" id="irritation" name="irritation" data-action="calculate" />
+                <label for="irritation" title="Накинет вес за боль от задачи">👿 Бесит</label>
+            </div>
         </div>
 
+        <!--контейнер, содержащий flaky-weight-->
         <div id="flaky">
-
             <h2>Массовость</h2>
             <select id="mass" data-action="calculate">
                 <option value=1>1: Единичная ошибка</option>
@@ -84,7 +92,7 @@
         </div>
 
     </form>
-    <div id="total" title="(Новаторство+Предотвращаемый уровень риска)/Сложность реализации" data-action="copyElement">
+    <div id="total" data-action="copyElement">
         20</div>
     <p id="copyText">Click to Copy</p>
 

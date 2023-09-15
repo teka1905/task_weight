@@ -9,7 +9,15 @@ const Task = new State('task', function () {
   let innovation = +document.getElementById("innovation").value;
   let risk = +document.getElementById("risk").value;
   let level = +document.getElementById("level").value;
+  let irritation = +document.getElementById("irritation").checked;
+  console.log(irritation)
+
   let result = ((innovation + risk) / level) * 10
+  if (irritation) {
+    result += 100
+    console.log('result')
+    console.log(result)
+  }
   document.getElementById("total").innerHTML = Math.round(result)
 })
 
@@ -63,7 +71,7 @@ inputElements.forEach((element) => {
   element.addEventListener('change', form.calculate)
 });
 
-// _______________________Радио-батоны_______________________
+// _____________________Радио-батоны режимов_____________________
 
 const stateInputElements = document.querySelectorAll('[name="switch-one"]');
 stateInputElements.forEach((element) => {
@@ -76,7 +84,7 @@ stateInputElements.forEach((element) => {
     }})
 });
 
-// _______________________Копирование веса в буфер_______________________
+// ____________________Копирование веса в буфер____________________
 
 function copyToClipboard() {
   let area = document.createElement('textarea');
