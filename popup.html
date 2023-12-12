@@ -51,11 +51,11 @@
             <h2 title="Сколько времени займет выполнение задачи?">Срок реализации</h2>
             <p class="description">Сколько времени займет выполнение задачи?</p>
             <select id="level" data-action="calculate">
-                <option value=0.5 title="Делается за 5 минут">0: 0 SP</option>
+                <option value=0.5 title="Делается за 5 минут">0.5: 0 SP</option>
                 <option selected="selected" value=1>1: 0.5 SP</option>
-                <option value=2>5: 1 SP</option>
-                <option value=3>13: 2 SP</option>
-                <option value=4>21: 5 SP</option>
+                <option value=2>2: 1 SP</option>
+                <option value=3>3: 2 SP</option>
+                <option value=4>4: 5 SP</option>
             </select>
 
             <h2></h2>
@@ -70,23 +70,15 @@
             <h2>Массовость</h2>
             <select id="mass" data-action="calculate">
                 <option value=1>1: Единичная ошибка</option>
-                <option value=2>5: Затрагивает 2-3 теста</option>
-                <option value=3.5>13: Затрагивает много тестов</option>
-            </select>
-
-            <h2>Насколько блокирует</h2>
-            <select id="block" data-action="calculate">
-                <option value=1 title="падает раз в 100 лет">0.5: Едва заметно</option>
-                <option value=2 title="падает редко, но не раз в 100 лет">1: Не блокирует</option>
-                <option value=3 title="но не каждый прогон">5: Периодически замечаем</option>
-                <option value=4 title="валит пайплайн каждый прогон">13: Блокирует</option>
+                <option value=3>3: Затрагивает 2-3 теста</option>
+                <option value=6>6: Затрагивает много тестов</option>
             </select>
 
             <h2>Критичность области, в которой флакует тест</h2>
             <select id="critical" data-action="calculate">
                 <option value=1>1: P2 и ниже</option>
-                <option value=2>5: P1</option>
-                <option value=3>13: P0</option>
+                <option value=4>4: P1</option>
+                <option value=7>7: P0</option>
             </select>
 
         </div>
